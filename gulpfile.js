@@ -105,7 +105,7 @@ gulp.task('templates', () => {
 gulp.task('scripts', () => {
   gulp.src(paths.src.javascript)
     .pipe(babel({
-      presets: ['es2015'],
+      presets: ['env'],
     }))
     .pipe(concat('bundle.js'))
     .on('error', onError)
